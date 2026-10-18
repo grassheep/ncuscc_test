@@ -1,6 +1,5 @@
 # 虚拟机的 Ubuntu 安装镜像：3.3 GB，远超 GitHub 单文件 100 MB 上限
-# 需要时从官方地址重新下载：
-#   https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso
+# 下载地址与 SHA256 校验值见「进阶部分/环境文件/镜像下载说明.md」
 *.iso
 
 # 操作系统产生的垃圾文件
