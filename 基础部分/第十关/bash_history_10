@@ -1,0 +1,11 @@
+cd /workspace/repo
+git status
+echo "local git practice
+
+first local note" > notes.txt
+git diff -- notes.txt
+git add notes.txt
+git status
+git commit -m "learn: first local commit"
+git status
+git log --oneline

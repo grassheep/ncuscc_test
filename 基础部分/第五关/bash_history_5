@@ -1,0 +1,14 @@
+cd /workspace
+ls -la
+ls -la /opt/recruitment/bin
+cat manage.sh
+bash -n manage.sh
+./manage.sh start; echo "rc=$?"
+./manage.sh status
+./manage.sh start; echo "rc=$?"
+./manage.sh status
+./manage.sh report
+./manage.sh stop
+./manage.sh status; echo "rc=$?"
+cat stopped.log
+./manage.sh bogus; echo "rc=$?"

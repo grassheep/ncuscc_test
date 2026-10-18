@@ -1,0 +1,8 @@
+cd /workspace/repo
+git status
+git log --oneline
+git diff -- notes.txt
+git restore notes.txt
+git status
+git revert --no-edit HEAD
+git log --oneline

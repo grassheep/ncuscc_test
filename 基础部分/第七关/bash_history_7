@@ -1,0 +1,15 @@
+cd /workspace
+ls -la
+cat -A hello.c build.sh
+command -v gcc cc make
+dpkg -l | awk 'NR>5 && $1!="ii"{print}'
+apt-mark showhold
+apt-get -f install -s | tail -n 20
+cat setup-build.sh
+bash setup-build.sh
+command -v gcc make
+bash build.sh
+ls -la hello
+/workspace/hello foundation
+/workspace/hello foundation > /workspace/flag
+cat -A /workspace/flag

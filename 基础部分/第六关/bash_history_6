@@ -1,0 +1,15 @@
+cd /workspace
+ls -la
+stat -c '%a %U:%G' task.txt
+id
+grep Cap /proc/self/status
+getent group archive
+getent passwd archiver
+id visitor
+cat setup-account.sh
+bash setup-account.sh
+stat -c '%a %U:%G' task.txt
+runuser -u archiver -- cat task.txt
+runuser -u visitor -- cat task.txt; echo "rc=$?"
+runuser -u archiver -- cat task.txt > flag
+cat flag

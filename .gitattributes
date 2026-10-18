@@ -1,0 +1,7 @@
+# 所有文本文件统一用 LF，避免 Windows 上 CRLF 混入导致内容被改动
+* text=auto eol=lf
+
+# Bash 历史记录对换行敏感，强制不动
+bash_history_* -text
+*.iso -text
+*.zip -text

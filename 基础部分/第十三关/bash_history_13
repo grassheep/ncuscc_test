@@ -1,0 +1,12 @@
+cd /workspace/repo
+git status
+git switch -c trial
+echo "local git practice
+
+first local note" > notes.txt
+git add notes.txt
+git commit -m "learn: first local commit"
+git switch main
+git merge --no-edit trial
+git revert --no-edit HEAD
+git log --oneline

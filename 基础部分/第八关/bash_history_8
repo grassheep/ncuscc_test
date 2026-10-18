@@ -1,0 +1,4 @@
+cd /workspace/repo
+git init -b main
+git status
+git log

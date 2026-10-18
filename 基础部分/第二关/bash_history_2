@@ -1,0 +1,14 @@
+cd /workspace
+ls -la
+cat word.txt
+grep -n ACCESS_KEY word.txt
+KEY=$(grep -o 'ACCESS_KEY=.*' word.txt | cut -d= -f2)
+echo $KEY
+cp signal-A.bin input
+./exam -e $KEY
+cp output outputA
+cp signal-B.bin input
+./exam -e $KEY
+cp output outputB
+cat outputA outputB > flag
+cat flag

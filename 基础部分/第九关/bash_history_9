@@ -1,0 +1,15 @@
+cd /workspace/repo
+cd /workspace/repo
+git add notes.txt
+git status
+git commit -m "learn: first local commit"
+cd /workspace/repo
+echo "local git practice
+
+first local note" > /notes.txt
+echo "local git practice
+
+first local note" > notes.txt
+git add notes.txt
+git status
+git commit -m "learn: first local commit"

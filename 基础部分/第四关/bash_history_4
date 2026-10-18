@@ -1,0 +1,15 @@
+cd /workspace
+ls -la
+cat README.md
+echo $TASK_TOOL_DIR
+ls -la $TASK_TOOL_DIR
+"$TASK_TOOL_DIR/task-probe" --help
+"$TASK_TOOL_DIR/task-probe" ok TEST-1; echo "rc=$?"
+cat route.sh
+bash -n route.sh
+env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin ./route.sh ok TEST-1; echo "rc=$?"
+cat "$ROUTE_RESULT"
+env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin ./route.sh retry TEST-1; echo "rc=$?"
+cat "$ROUTE_RESULT"
+env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin ./route.sh fatal TEST-1; echo "rc=$?"
+env -i PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin ./route.sh ok 'bad-item'; echo "rc=$?"

@@ -1,0 +1,10 @@
+cd /workspace
+ls -la
+cat key.txt
+./exam -help
+cp input.bin input
+ls -la input input.bin
+./exam -e MOON
+ls -la output
+cp output flag
+cat flag

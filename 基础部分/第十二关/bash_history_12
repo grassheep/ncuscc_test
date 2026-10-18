@@ -1,0 +1,14 @@
+cd /workspace/repo
+git status
+git branch topic
+git branch
+echo "main line" > main.txt
+git add -- main.txt
+git commit -m "test"
+git switch topic
+echo "topic line" > topic.txt
+git add -- topic.txt
+git commit -m "test"
+git switch main
+git merge --no-edit topic
+git log --oneline --graph

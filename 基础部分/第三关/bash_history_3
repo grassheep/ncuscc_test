@@ -1,0 +1,11 @@
+cd /workspace
+ls -la
+cat key.txt
+cp input.txt input
+./exam -e NOVA
+cat exam.log
+sed -i '$s/$/ /' input
+tail -c 16 input | od -c
+./exam -e NOVA
+cp output flag
+cat flag
